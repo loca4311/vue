@@ -1,4 +1,4 @@
-let app = new Vue({
+const app = new Vue({
     el: '#app',
     data: {
         message: 'Hello Vue!'
@@ -8,14 +8,14 @@ let app = new Vue({
 
 app.message = 'I have change data!';
 
-let app2 = new Vue({
+const app2 = new Vue({
     el: '#app-2',
     data: {
         message: 'Вы загрузили эту страницу: ' + new Date().toLocaleString()
     }
 });
 
-let app3 = new Vue ({
+const app3 = new Vue ({
     el: '#app-3',
     data: {
         seen: true
@@ -24,7 +24,7 @@ let app3 = new Vue ({
 
 app3.seen = true;
 
-let app4 = new Vue ({
+const app4 = new Vue ({
     el: '#app-4',
     data: {
         todos: [
@@ -36,4 +36,24 @@ let app4 = new Vue ({
 });
 
 app4.todos.push({ text: 'Profit' });
-app4.todos.push({ text: 'Зробити з Бачкурем проект!!!' });
+app4.todos.push({ text: 'Зробити прект на Vue' });
+
+const app5 = new Vue ({
+    el: '#app-5',
+    data: {
+        message: 'Привіт Vue.js!'
+    },
+    methods: {
+        reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('')
+        }
+    }
+});
+
+const app6 = new Vue ({
+    el: '#app-6',
+    data: {
+        message: 'Привіт Vue!'
+    }
+});
+
